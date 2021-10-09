@@ -1,0 +1,7 @@
+/.idea
+/.vscode
+
+# MySQLのデータは除外
+/docker/db/data
+!/docker/db/data/.gitignore
+/docker/db/logs/*.log
