@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS todos
+(
+    id   int(11) NOT NULL AUTO_INCREMENT,
+    task TEXT NOT NULL,
+    PRIMARY KEY (id)
+);
