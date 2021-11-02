@@ -21,6 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get("/todos", [TodosController::class, "getTodos"]);
 Route::get("/todos/{id}", [TodosController::class, "getTodo"]);
-Route::post("/todos/{id}", [TodosController::class, "createTodo"]);
+Route::post("/todos", [TodosController::class, "createTodo"]);
 Route::put("/todos/{id}", [TodosController::class, "updateTodo"]);
 Route::delete("/todos/{id}", [TodosController::class, "deleteTodo"]);
