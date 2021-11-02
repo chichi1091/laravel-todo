@@ -36,7 +36,7 @@ class TodosController extends BaseController
                 'task' => $task,
             ]);
             DB::commit();
-        } finally {
+        } catch ($exception) {
             DB::rollBack();
         }
 
@@ -54,7 +54,7 @@ class TodosController extends BaseController
             $todo = Todos::find($id);
             $todo->update(['task' => $task]);
             DB::commit();
-        } finally {
+        } catch ($exception) {
             DB::rollBack();
         }
 
@@ -70,7 +70,7 @@ class TodosController extends BaseController
             $todo = Todos::find($id);
             $todo->delete();
             DB::commit();
-        } finally {
+        } catch ($exception) {
             DB::rollBack();
         }
 
